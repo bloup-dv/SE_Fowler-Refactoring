@@ -25,7 +25,6 @@ class Customer {
             
             Rental each = (Rental) enum_rentals.nextElement();
             
-            
             // add frequent renter point
             frequentRenterPoints ++;
             // add bonus for a two day new release rental

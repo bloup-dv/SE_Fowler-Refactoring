@@ -1,8 +1,9 @@
+package java;
 
 import java.lang.*;
 import java.util.*;
 
-class Customer {
+public class Customer {
     private String name;
     private Vector rentals = new Vector();
     public Customer (String newname){
@@ -16,7 +17,7 @@ class Customer {
     };
     public String statement() {
         Enumeration enum_rentals = rentals.elements();	    
-        String result = "Rental Record for " + this.getName() + "\n";
+        String result = "java.Rental Record for " + this.getName() + "\n";
         result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
 
         while (enum_rentals.hasMoreElements()) {
@@ -33,7 +34,7 @@ class Customer {
     }
     private double getTotalCharge(){
         double result = 0;
-        Enumeration rentals = _rentals.elements();
+        Enumeration rentals = this.rentals.elements();
         while (rentals.hasMoreElements()){
             Rental each = (Rental) rentals.nextElement();
             result += each.getCharge();
@@ -42,7 +43,7 @@ class Customer {
     }
     private int getTotalFrequentRenterPoints(){
         int result = 0;
-        Enumeration rentals = _rentals.elements();
+        Enumeration rentals = this.rentals.elements();
         while (rentals.hasMoreElements()){
             Rental each = (Rental) rentals.nextElement();
             result += each.getFrequentRenterPoints();

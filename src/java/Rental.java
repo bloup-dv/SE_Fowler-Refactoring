@@ -1,4 +1,6 @@
-class Rental {
+package java;
+
+public class Rental {
     private Movie movie;
     private int daysRented;
     public Rental(Movie newmovie, int newdaysRented) {
@@ -12,12 +14,12 @@ class Rental {
         return movie;
     }
     public int getFrequentRenterPoints(){
-        if((getMovie().getPriceCode() == Movie.NEW_REEASE) && getDaysRented() > 1)
+        if((getMovie().getPriceCode() == Movie.NEW_RELEASE) && getDaysRented() > 1)
             return 2;
         else
             return 1;
     }
-    private double getCharge() {
+     double getCharge() {
         double result = 0;
         switch (getMovie().getPriceCode()) {
             case Movie.REGULAR:

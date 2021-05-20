@@ -1,7 +1,5 @@
 package java;
 
-import java.util.Enumeration;
-
 public class Rental {
     private Movie movie;
     private int daysRented;
@@ -17,10 +15,10 @@ public class Rental {
     }
 
     public int getFrequentRenterPoints(){
-        return movie.getFrequentRenterPoints(getDaysRented());
+        return movie.price.getFrequentRenterPoints(getDaysRented());
     }
     public double getCharge(){
-        return movie.getCharge(daysRented);
+        return movie.price.getCharge(daysRented);
     }
 
 }
